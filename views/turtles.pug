@@ -15,6 +15,10 @@ html.no-js
                 h1 The turtles race
                 #halloffame
                     h2 Hall of fame
+                    ol#list
+                        each player, index in players
+                            li(data-value= "" + player.result) #{player.username} :  
+                                span
                 #start
                     #mask
                         section#section1

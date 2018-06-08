@@ -1,7 +1,5 @@
-body{background-color: #1d1f21; font-family: 'Lora', serif; color: #0a5383; font-size: 0.9em;}
+body{background-color: #1d1f21; font-family: 'Lora', arial, serif; color: #0a5383; font-size: 0.9em;}
 
-
-    
 fieldset {border: 0; padding: 0; margin: 0;}
 abbr{border-bottom: 1px dashed #0d59d7;cursor: inherit !important; text-decoration: none !important;}
 #centerCanvas { /* width: 928px; height: /* 545 */ /*483px ; overflow: visible; position: relative; margin: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);*/ position: absolute; transform: none; width: 928pxpx; height: 483px; position: absolute; margin-top: -242px; margin-left: -464px; top: 50%; left: 50%;}
@@ -12,8 +10,10 @@ input[type=submit]{font-size: 1.1em;}
 footer button, footer #startit{padding: 5px 10px; margin: 0 5px; border: 2px solid #0a5383; color: #0a5383; cursor: pointer; background-color: #fff; outline: none; font-family: 'Lora', serif; border-radius: 4px; font-size: 1.1em;}
 footer button:hover, footer button:focus, #startit:hover{ cursor: pointer; transition: all 500ms ease; transition-property: background-color, border; border: 2px solid #fff; color: #fff; background-color: #0a5383;}
 footer{padding: 10px 0; text-align: center;}
-#start {display: block; position: absolute; width: 320px; height: 202px; z-index: 300; top: 100px; left: 380px; padding: 20px 50px; background-color: rgba(255, 255, 255, 0.6); border-radius: 4px;}
-#halloffame {visibility: hidden; display: block; position: absolute; width: 120px; height: 202px; z-index: 310; top: 100px; left: 120px; padding: 20px 50px; background-color: rgba(255, 255, 255, 0.6); border-radius: 4px;}
+#start {display: block; position: absolute; width: 320px; height: 202px; z-index: 300; top: 70px; left: 380px; padding: 20px 50px; background-color: rgba(255, 255, 255, 0.6); border-radius: 4px;}
+#halloffame {visibility: visible; display: block; position: absolute; width: 180px; height: 202px; z-index: 310; top: 70px; left: 120px; padding: 20px 20px; background-color: rgba(255, 255, 255, 0.6); border-radius: 4px;}
+#halloffame ol{padding: 5px 0 0 15px; margin-left: 5px;}
+#halloffame li{padding-bottom: 10px;}
 #mask{width: 320px; height: 222px; position: relative; overflow: hidden;}
 #gameCanvas h1 {visibility: hidden; position: relative; font-family: 'Caveat Brush', cursive; padding: 10px 20px; color: #1248a2; z-index: 200; font-size: 4em; text-align: center; }
 h1, h2{ font-size: 1.4em; margin-top: 0; padding-top: 15px;}
@@ -22,7 +22,7 @@ p{line-height: 1.4em;}
 section{display: block; width: auto; height: 202px;}
 section a{color: #7a4f22 ; text-decoration: none;}
 #section1 {position: relative;}
-.content span.round{border: 2px solid #0a5383; margin-left: 10px; margin-right: 5px; border-radius: 50%; padding: 2px; width: 14px; height: 14px; text-align: center; display: inline-block; text-transform: uppercase;}
+.content span.round{border: 2px solid #0a5383; line-height: 15px; margin-left: 10px; margin-right: 5px; border-radius: 50%; padding: 2px; width: 14px; height: 14px; text-align: center; display: inline-block; text-transform: uppercase;}
 #playerinfo {position: absolute; color: #333; top: 20px; left:40px; visibility: visible ; width: 300px; z-index: 300; text-align: left; font-size: 1.5em; font-weight: bold;}
 #scene{position: absolute; left: 0; top: 0; width: 4605px /*2760px*/; height: 545px; background-color: #b8dbf6; }
 #ground{position: absolute; z-index: 100; background: transparent url(../images/background/ground.png) 0 0 repeat-x; background-size: 921px 183px; width: 100%; height: 253px; left: 0; bottom: 0; }

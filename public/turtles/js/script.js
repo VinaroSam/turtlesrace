@@ -67,8 +67,7 @@
         sceneryStyle : window.getComputedStyle(document.getElementById('scene'))
     };
     
-    
-     var decors = {
+    var decors = {
         clouds : document.getElementById("clouds"),
         cloudsStyle : window.getComputedStyle(document.getElementById("clouds"))
     };
@@ -204,18 +203,14 @@
         var min = Math.floor(time/1000/60);
         var sec = Math.floor(time/1000);
         var msec = time % 1000;
-            
-        if(min < 10) {
-            min = "0" + min;
-        }
-        if(sec >= 60) {
-            sec = sec % 60;
-        }
-        if(sec < 10) {
-            sec = "0" + sec;
+        
+        if( min==0){
+            min = ""
+        } else {
+            min = min + "mn";
         }
 
-        return min + ":" + sec + ":" + msec.toString().substring(0,2);
+        return min + sec + "." + msec.toString().substring(0,2) + "s";
     };
 
     // Connect socket.io module
@@ -243,7 +238,10 @@
             });
     });
 
-
+    $('#list li span').html(function(){
+        var resulttime = $(this).closest('li').attr('data-value');
+        return timeformat(resulttime);
+    });
 
     $('#userform').submit(function(event){
         event.preventDefault();

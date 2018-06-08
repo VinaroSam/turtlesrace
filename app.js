@@ -7,6 +7,18 @@ const MongoClient = require('mongodb').MongoClient;
 
 const url = "mongodb://localhost:27017/";
 
+const mongoose = require('mongoose');
+
+var playerSchema = mongoose.Schema({
+    username : String,
+    time : Number,
+    result : Number
+});
+
+var Player = mongoose.model("Player", playerSchema);
+var db = mongoose.connect("mongodb://localhost/turtlesgame");
+
+
 app.locals.pretty = true;
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname + '/views'));
@@ -18,7 +30,11 @@ app.get('/', function(req, res){
 });
 
 app.get('/turtles', function(req, res){
-    res.render('turtles.pug');
+    Player.find({result: {$exists: true}},function(err, players){
+        if(err) return console.error(err);
+        res.render('turtles', {players: players});
+    }).sort({result: 1}).limit(5);
+    
 });
 
 app.get('/jsgame', function(req, res){
