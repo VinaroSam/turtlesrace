@@ -4,11 +4,11 @@
   "description": "Back-end game multiplayer turtle race",
   "main": "app.js",
   "dependencies": {
-    "express": "^4.16.3",
+    "express": "^4.17.1",
     "mongodb": "^3.3.3",
-    "mongoose": "^5.6.9",
-    "pug": "^2.0.3",
-    "socket.io": "^2.1.0"
+    "mongoose": "^5.7.7",
+    "pug": "^2.0.4",
+    "socket.io": "^2.3.0"
   },
   "devDependencies": {},
   "scripts": {
